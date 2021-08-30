@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css';
+import {Tooltip} from 'antd';
+import {ExclamationCircleFilled} from '@ant-design/icons'
+
+// import {ExclamationCircleFilled} from 'antd'
 
 function App() {
   return (
@@ -17,6 +22,11 @@ function App() {
         >
           Learn React
         </a>
+        <Tooltip title={<span style={{color:'black'}}>9月1日零点过期</span>} placement='topLeft'  color='white' arrowPointAtCenter getPopupContainer>
+          
+         <ExclamationCircleFilled style={{color:'#ff8903',backgroundColor:'white',borderRadius:'60%'}} />
+          
+        </Tooltip>
       </header>
     </div>
   );
